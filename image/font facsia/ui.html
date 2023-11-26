@@ -1,0 +1,14 @@
+
+  <h2>Selection Change Observer</h2>
+  <p>Observe the contents of figma.selection change as you change the selection in the file.</p>
+  <p>ID of selection is: </p>
+  <p id=selection></p>
+
+  <script>
+
+  onmessage = (event) => {
+    document.getElementById('selection').innerHTML = event.data.pluginMessage[0] ? event.data.pluginMessage[0].id : 'No selection';
+  }
+
+  </script>
+  
